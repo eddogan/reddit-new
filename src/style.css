@@ -1,3 +1,175 @@
-h1, p {
-  font-family: Lato;
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  margin: 0;
+}
+main {
+  display: flex;
+  height: 100vh;
+}
+.subreddit {
+  background: #ff4500;
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navLogo {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em auto;
+}
+.postsContainer--list {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  height: 100vh;
+  padding-left: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postsContainer--card {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  height: 100vh;
+  padding-left: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postsContainer--masonry {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  padding-left: 4em;
+  column-count: 3;
+}
+input {
+  width: 100%;
+  border: none;
+  padding: 0.6em;
+  border-radius: 30px;
+  background: #ffa482;
+  margin: 2em 0;
+}
+.subreddit--community {
+  width: 70%;
+  color: #fff;
+  border-top: 1px solid #ffa482;
+  padding: 1em;
+  line-height: 1.3;
+}
+.subreddit--community h1 {
+  font-size: 1.33em;
+}
+.subreddit--viewSelector {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ffa482;
+  padding-top: calc(2em - 12px);
+  padding-bottom: calc(2em - 12px);
+  padding-right: 1em;
+  padding-left: 1em;
+  width: 70%;
+}
+.subreddit--viewSelector .MuiIconButton-root.active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/*----NAVIGATION----*/
+.subreddit--navigation {
+  width: 70%;
+  border-top: 1px solid #ffa482;
+  border-bottom: 1px solid #ffa482;
+  padding: 1em;
+}
+
+/*---- THREAD CARD ----*/
+.threadCard {
+  width: calc(100% - 0.8em);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.8em 0;
+  border: 1px solid #eee;
+  box-shadow: #eee 0 2px 2px -2px, #eee 0 2px 2px 0, #eee 0 1px 16px 0;
+  border-radius: 4px;
+  max-width: 60%;
+}
+.postsContainer--card .threadCard {
+  flex-wrap: wrap;
+  max-width: 640px;
+}
+.postsContainer--masonry .threadCard {
+  flex-wrap: wrap;
+  max-width: 100%;
+  break-inside: avoid-column;
+}
+.threadCard:hover {
+  background: #ff45000d;
+  box-shadow: 0;
+  cursor: pointer;
+}
+.threadCard--thumbnail {
+  min-width: 160px;
+  flex: 0 0 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.postsContainer--card .threadCard--thumbnail {
+  flex: 0 0 100%;
+  min-height: 300px;
+}
+.postsContainer--masonry .threadCard--thumbnail {
+  flex: 0 0 100%;
+  min-height: 200px;
+}
+.threadCard--score {
+  font-size: 1.25em;
+  font-weight: 700;
+  flex: 0 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.threadCard--content {
+  flex: 1 1 auto;
+  padding: 0.8em;
+}
+.postsContainer--card .threadCard--content {
+  flex-basis: calc(100% - 5rem - 1.6em);
+}
+.postsContainer--masonry .threadCard--content {
+  flex-basis: calc(100% - 5rem - 1.6em);
+}
+.threadCard--content--topRow {
+  display: flex;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.8rem;
+}
+.threadCard--author {
+  padding-right: 1em;
+}
+.threadCard--title a {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 300;
+  padding: 0.4em 0;
+  color: #333;
+  text-decoration: none;
+}
+.threadCard--comments {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  padding-right: 1em;
 }
